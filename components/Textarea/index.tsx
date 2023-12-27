@@ -1,21 +1,30 @@
-import { forwardRef, useId } from 'react'
-import { Scontainer, Slabel } from '../Input/styles'
+import { Scontainer, SerrorMessage, Slabel } from '../Input/styles'
 import { Stextarea } from './styles'
+import { TextareaHTMLAttributes, forwardRef, useId } from 'react'
 
-interface TextareaInterface {
+interface TextareaInterface
+  extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   label: string
-  placehoalder?: string
+  errorMessage?: string
 }
 
 const Textarea = forwardRef<HTMLTextAreaElement, TextareaInterface>(
-  function Textarea_({ label, placehoalder = '' }, ref) {
-    const id = useId()
-
+  (
+    { label, required = true, errorMessage = '', ...props }: TextareaInterface,
+    ref,
+  ) => {
+    const textareaId = useId()
     return (
       <Scontainer>
-        <Slabel htmlFor={id}>{label}</Slabel>
-
-        <Stextarea id={id} placeholder={placehoalder} ref={ref} />
+        <Slabel htmlFor={textareaId}>{label}</Slabel>
+        <Stextarea
+          id={textareaId}
+          required={required}
+          ref={ref}
+          data-error={!!errorMessage}
+          {...props}
+        />
+        {errorMessage && <SerrorMessage>{errorMessage}</SerrorMessage>}
       </Scontainer>
     )
   },

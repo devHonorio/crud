@@ -56,4 +56,14 @@ export class Product {
   setCategory(category: string) {
     this.#category = category
   }
+
+  get objectLiteral() {
+    return {
+      id: this.id,
+      name: this.name,
+      price: this.price,
+      category: this.category,
+      description: this.description,
+    }
+  }
 }

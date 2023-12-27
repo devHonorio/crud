@@ -16,4 +16,10 @@ border
 rounded-2xl
 px-5
 py-6
+data-[error=true]:border-red-500
+`
+
+export const SerrorMessage = tw.p`
+text-xs
+text-red-500
 `

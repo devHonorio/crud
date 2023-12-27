@@ -5,4 +5,5 @@ border
 rounded-2xl
 px-5
 py-6
+data-[error=true]:border-red-500
 `

@@ -20,6 +20,7 @@ border
 rounded-3xl
 p-5
 relative
+overflow-y-scroll
 `
 export const SmodalTitle = tw.h1`
 text-lg
@@ -29,12 +30,8 @@ font-medium
 export const SmodalFooter = tw.div`
 flex
 justify-end
-p-5
-absolute
-bottom-0
-left-0
-right-0
 gap-2
+mt-5
 `
 
 export const SmodalButton = tw.button`
