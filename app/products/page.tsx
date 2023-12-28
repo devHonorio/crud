@@ -26,7 +26,7 @@ const schema = z.object({
 export interface IFormValues extends z.infer<typeof schema> {}
 
 export default function Products() {
-  const [isOpen, setIsOpen] = useState(true)
+  const [isOpen, setIsOpen] = useState(false)
 
   const {
     register,
