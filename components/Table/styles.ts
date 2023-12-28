@@ -20,6 +20,3 @@ export const Std = tw.td`
 py-6
 pr-5
 `
-export const Stable = tw.table`
-
-`

@@ -25,7 +25,7 @@ import { z } from 'zod'
 const schema = z.object({
   id: z.string(),
   Nome: z.string().min(4, 'O nome deve conter pelomenos quatro letras'),
-  Preço: z.number().nonnegative('O preço não pode ser negativo.'),
+  Preço: z.number().nonnegative('O preço não pode ser negative'),
   Categoria: z.string(),
   Descrição: z.string(),
 })
@@ -119,6 +119,8 @@ export default function Products() {
           <Input
             label="Preço"
             type="number"
+            step={0.05}
+            min={0}
             errorMessage={errors.Preço?.message}
             {...register('Preço', {
               setValueAs: (value: string) => parseInt(value, 10),
