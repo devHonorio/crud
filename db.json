@@ -1,3 +1,43 @@
 {
-  "products": [{ "teste": 200 }]
+  "products": [
+    {
+      "id": "José Honorio",
+      "name": "jose'",
+      "price": 333,
+      "category": "KDNcd",
+      "description": "kck\n"
+    },
+    {
+      "id": "jose",
+      "name": "kkk",
+      "price": 999,
+      "category": "kkk",
+      "description": "k"
+    },
+    {
+      "id": "joseee",
+      "name": "kkk",
+      "price": 999,
+      "category": "kkk",
+      "description": "k"
+    },
+    {
+      "id": "josee",
+      "name": "kkk",
+      "price": 999,
+      "category": "kkk",
+      "description": "k"
+    },
+    {
+      "id": "jos55e",
+      "name": "kkk",
+      "price": 999,
+      "category": "kkk",
+      "description": "k"
+    },
+    {
+      "price": 100,
+      "id": "aa"
+    }
+  ]
 }

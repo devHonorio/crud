@@ -9,6 +9,8 @@ mx-auto
 export const Smain = tw.main`
 flex
 flex-1
+flex-col
+gap-5
 `
 
 export const Saside = tw.aside`

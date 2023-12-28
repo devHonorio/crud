@@ -8,6 +8,12 @@ import {
   SmodalFooter,
   SmodalTitle,
 } from '@/components/Modal/styles'
+import {
+  StableCaption,
+  StableContainer,
+  Std,
+  Sth,
+} from '@/components/Table/styles'
 import Textarea from '@/components/Textarea'
 import { Product } from '@/models/Product'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -54,7 +60,47 @@ export default function Products() {
   }
   return (
     <Layout>
-      <h1>Olá, mundo!!</h1>
+      <StableContainer>
+        <table>
+          <StableCaption>Produtos</StableCaption>
+          <thead>
+            <Sth>id</Sth>
+            <Sth>Nome</Sth>
+            <Sth>Preço</Sth>
+            <Sth>Estoque</Sth>
+          </thead>
+
+          <tbody className="divide-y">
+            <tr>
+              <Std>1</Std>
+              <Std>Canudo de salpicão</Std>
+              <Std>R$ 0,80</Std>
+              <Std>350</Std>
+            </tr>
+
+            <tr>
+              <Std>1</Std>
+              <Std>Canudo de salpicão</Std>
+              <Std>R$ 0,80</Std>
+              <Std>350</Std>
+            </tr>
+
+            <tr>
+              <Std>1</Std>
+              <Std>Canudo de salpicão</Std>
+              <Std>R$ 0,80</Std>
+              <Std>350</Std>
+            </tr>
+
+            <tr>
+              <Std>1</Std>
+              <Std>Canudo de salpicão</Std>
+              <Std>R$ 0,80</Std>
+              <Std>350</Std>
+            </tr>
+          </tbody>
+        </table>
+      </StableContainer>
 
       <SmodalButton onClick={() => setIsOpen(true)}>Open modal</SmodalButton>
       <Modal isOpen={isOpen}>
